@@ -163,10 +163,10 @@ export function resolveParserPlugins(
     userPlugins = userPlugins.filter(p => p !== 'jsx')
   }
   if (lang === 'ts' || lang === 'tsx') {
-    plugins.push(
-      ['typescript', { dts }],
-      ['importAttributes', { deprecatedAssertSyntax: true }]
-    )
+    plugins.push(['typescript', { dts }])
+    if (!plugins.includes('importAssertions')) {
+      plugins.push(['importAttributes', { deprecatedAssertSyntax: true }])
+    }
     if (!plugins.includes('decorators')) {
       plugins.push('decorators-legacy')
     }
