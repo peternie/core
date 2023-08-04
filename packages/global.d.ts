@@ -12,7 +12,7 @@ declare var __SSR__: boolean
 declare var __COMMIT__: string
 declare var __VERSION__: string
 declare var __COMPAT__: boolean
-
+2
 // Feature flags
 declare var __FEATURE_OPTIONS_API__: boolean
 declare var __FEATURE_PROD_DEVTOOLS__: boolean
